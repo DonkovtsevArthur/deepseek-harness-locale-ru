@@ -1,6 +1,6 @@
 # Русский языковой пакет для DeepSeek Harness
 
-**dsh-locale-ru** — языковой пакет (language pack) для веб-интерфейса [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): добавляет **Русский** в переключатель языков (Settings → General → Language) и переводит интерфейс на русский язык.
+**deepseek-harness-locale-ru** — языковой пакет (language pack) для веб-интерфейса [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): добавляет **Русский** в переключатель языков (Settings → General → Language) и переводит интерфейс на русский язык.
 
 Переведено **2 909 строк** в **64 словарях**: чат, диалог, настройки, расписание, файловый менеджер, плагины, терминал, субагенты и другие разделы.
 
@@ -11,13 +11,19 @@
 ### Через CLI (рекомендуется)
 
 ```bash
+dsh plugin --profile desktop add deepseek-harness-locale-ru
+```
+
+Или напрямую из GitHub:
+
+```bash
 dsh plugin --profile desktop add github:DonkovtsevArthur/dsh-locale-ru
 ```
 
 Для другого профиля замените `desktop` на его имя. Если у вас tarball-файл:
 
 ```bash
-dsh plugin --profile desktop add /путь/к/dsh-locale-ru-1.0.0.tgz
+dsh plugin --profile desktop add /путь/к/deepseek-harness-locale-ru-1.0.0.tgz
 ```
 
 ### Через интерфейс
@@ -25,7 +31,7 @@ dsh plugin --profile desktop add /путь/к/dsh-locale-ru-1.0.0.tgz
 Откройте **Plugins** (боковая панель) → **Install external bundle** и укажите:
 
 ```
-github:DonkovtsevArthur/dsh-locale-ru
+deepseek-harness-locale-ru
 ```
 
 ## Включение языка

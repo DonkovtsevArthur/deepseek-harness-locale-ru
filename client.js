@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-	id: 'dsh-locale-ru',
+	id: 'deepseek-harness-locale-ru',
 	factory(require) {
 		var module = { exports: {} };
 		var exports = module.exports;
@@ -3047,10 +3047,10 @@ window.__ModuleLoader__.load({
 		function apply(ctx) {
 			ctx.effect(
 				() => ctx.locale.addLanguage({ id: 'ru', label: 'Русский', fallback: 'en' }),
-				'dsh-locale-ru: language',
+				'deepseek-harness-locale-ru: language',
 			);
 			for (const ns of Object.keys(DICTS)) {
-				ctx.effect(() => ctx.locale.register(ns, 'ru', DICTS[ns]), 'dsh-locale-ru: ' + ns);
+				ctx.effect(() => ctx.locale.register(ns, 'ru', DICTS[ns]), 'deepseek-harness-locale-ru: ' + ns);
 			}
 		}
 		exports.apply = apply;
