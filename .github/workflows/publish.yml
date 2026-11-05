@@ -1,0 +1,28 @@
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  id-token: write # OIDC for npm trusted publishing
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://registry.npmjs.org'
+
+      # No dependencies to install; verify the bundle parses before publishing.
+      - run: node --check client.js
+      - run: node --check index.js
+
+      - run: npm publish --access public --provenance
